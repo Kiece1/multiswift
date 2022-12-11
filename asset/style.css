@@ -1,0 +1,275 @@
+:root {
+  --gold: rgb(238, 195, 20);
+  --light-gray: #f6f6f6;
+  --gray: #666666;
+  --navbar-margin: 4rem;
+  --navbar-padding: 2rem;
+  --navbar-height: 9rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Baloo Paaji 2", cursive;
+}
+
+/*
+<!---------------------------------------------->
+<!-- BARRE de NAVIGATION ----------------------->
+<!---------------------------------------------->
+*/
+
+nav {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: var(--navbar-padding) 0;
+  background: var(--light-gray);
+  height: var(--navbar-height);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+nav li {
+  margin: 0 var(--navbar-margin);
+}
+
+/* Couleur spécifique pour "home" */
+#home {
+  color: var(--gold);
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+nav li:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/*
+<!---------------------------------------------->
+<!-- BANNIERE avec LOGO MULTISWIFT ------------->
+<!---------------------------------------------->
+*/
+
+.banner__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(50rem - 0.7 * var(--navbar-height));
+  background: white;
+}
+
+.banner__logo img {
+  align-items: center;
+  width: 25vw;
+}
+
+.banner__background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner__background p {
+  margin-top: 7rem;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.banner__background h1 {
+  margin-top: 1.5rem;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 6rem;
+  color: white;
+}
+
+.banner__background button {
+  padding: 1.7rem 4.5rem;
+  margin-top: 4.2rem;
+  font-size: 2rem;
+  background-color: var(--gold);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.banner__background button:hover {
+  background-color: transparent;
+  border: 1px solid var(--gold);
+}
+
+/*
+<!---------------------------------------------->
+<!-- PARTIE PRINCIPALE ------------------------->
+<!---------------------------------------------->
+*/
+
+.main h2 {
+  font-family: "Nanum Gothic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  font-size: 3rem;
+}
+
+.main__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__text p {
+  margin: 3rem 10rem;
+  text-align: justify;
+}
+
+/*
+<!---------------------------------------------->
+<!-- PARTIE PRINCIPALE : CARDS ----------------->
+<!---------------------------------------------->
+*/
+
+.main__cards {
+  padding: 0 20rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.main__cards__item {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  width: auto;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+}
+
+.main__cards__item:hover {
+  box-shadow: 1px 1px 1px var(--gold);
+  transform: translate(-1.2px, -1.2px);
+}
+
+.main__cards__item__text {
+  margin-left: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.main__cards__item__text h3 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 2rem;
+}
+
+.main__cards__item__text p {
+  text-align: justify;
+  max-width: 20rem;
+  min-height: 10rem;
+}
+
+.main__cards__item img {
+  position: absolute;
+  transform: translateX(-12.5rem);
+  width: 7rem;
+}
+
+.main__cards__item img:hover {
+  color: var(--gold);
+}
+
+.main__cards__item img:hover {
+  display: none;
+}
+
+/*
+<!---------------------------------------------->
+<!-- PRESENTATION ------------------------------>
+<!---------------------------------------------->
+*/
+
+.main__presentation {
+  margin-top: 10rem;
+  width: 100vw;
+  height: 50vh;
+  background-color: var(--gold);
+}
+
+/*
+<!---------------------------------------------->
+<!-- CONTACT ----------------------------------->
+<!---------------------------------------------->
+*/
+
+.main__contact {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__contact__cards {
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main__contact__cards__item {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  width: 32rem;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+}
+
+.main__contact__cards__item:hover {
+  box-shadow: 1px 1px 1px var(--gold);
+  transform: translate(-1.2px, -1.2px);
+}
+
+.main__contact__cards__item__name {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.main__contact__cards__item button {
+  padding: 0.8rem 3rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  background-color: var(--gold);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.main__contact__cards__item button:hover {
+  background-color: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
